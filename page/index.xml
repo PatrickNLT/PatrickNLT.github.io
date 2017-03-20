@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Patrick Nollet</title>
+    <link>http://patrick.nollet.org/page/index.xml</link>
+    <description>Recent content in Pages on Patrick Nollet</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Mar 2017 09:08:20 +0100</lastBuildDate>
+    <atom:link href="http://patrick.nollet.org/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>http://patrick.nollet.org/about-me/</link>
+      <pubDate>Sat, 18 Mar 2017 09:08:20 +0100</pubDate>
+      
+      <guid>http://patrick.nollet.org/about-me/</guid>
+      <description>
+
+&lt;p&gt;I am a passionate mobile developer. I graduated in Computer Science from École Polytechnique and Télécom ParisTech in 2010.&lt;/p&gt;
+
+&lt;p&gt;I am interested in numerous topics, from cross-platform mobile development to image processing and computer vision (I also hold a master&amp;rsquo;s degree in medical imaging from Université Pierre et Marie Curie).&lt;/p&gt;
+
+&lt;h2 id=&#34;experience&#34;&gt;Experience&lt;/h2&gt;
+
+&lt;h3 id=&#34;late-2016-lead-mobile-developer-ios-android-at-baatch&#34;&gt;Late 2016 - Lead Mobile Developer (iOS, Android) at Baatch&lt;/h3&gt;
+
+&lt;p&gt;Baatch is a new startup whose team is composed of talented people. Our product has not been made public yet. 🤐&lt;/p&gt;
+
+&lt;h3 id=&#34;2015-senior-software-engineer-ios-android-at-the-grizzly-labs-http-thegrizzlylabs-com&#34;&gt;2015 - Senior Software Engineer (iOS, Android) at &lt;a href=&#34;http://thegrizzlylabs.com&#34;&gt;The Grizzly Labs&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;The Grizzly Labs are developing mobile apps, including Genius Scan [&lt;a href=&#34;https://itunes.apple.com/us/app/genius-scan-pdf-scanner/id377672876&#34;&gt;iOS&lt;/a&gt; - &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.thegrizzlylabs.geniusscan.free&#34;&gt;Android&lt;/a&gt;], a smart mobile scanner (20M users).&lt;/p&gt;
+
+&lt;p&gt;I worked on their existing apps for both Android and iOS, and developed Genius Sign [&lt;a href=&#34;https://itunes.apple.com/fr/app/genius-sign-annotation-de-documents-pdf/id989712005&#34;&gt;iOS&lt;/a&gt;] and Pyfl [&lt;a href=&#34;https://itunes.apple.com/us/app/id1040809372&#34;&gt;iOS&lt;/a&gt;].&lt;/p&gt;
+
+&lt;h3 id=&#34;2011-senior-software-engineer-ios-android-ruby-on-rails-at-applidium-https-applidium-com&#34;&gt;2011 - Senior Software Engineer (iOS, Android, Ruby on Rails) at &lt;a href=&#34;https://applidium.com&#34;&gt;Applidium&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Applidium is a mobile agency based in Paris. They brought VLC and Vim to iOS and hacked into Siri. I was the manager of a small team of developers and the lead developer of several apps, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;myCANAL [&lt;a href=&#34;https://itunes.apple.com/app/id694580816&#34;&gt;iOS&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;CANALPLAY [&lt;a href=&#34;https://itunes.apple.com/fr/app/id465049627&#34;&gt;iOS&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;RATP [&lt;a href=&#34;https://itunes.apple.com/fr/app/ratp/id507107090&#34;&gt;iOS&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Radio France [&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.radiofrance.radio.radiofrance.android&#34;&gt;Android&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
