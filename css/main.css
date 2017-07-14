@@ -23,6 +23,14 @@ h6 {
   color: #222;
 }
 
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
 a {
   outline: none;
 }
@@ -181,8 +189,7 @@ a {
 .archive-item-date {
   color: #ccc;
   font-size: 14px;
-  padding: 5px 0;
-  margin-top: 5px;
+  padding-top: 15px;
   display: block;
 }
 
@@ -290,9 +297,8 @@ a {
   }
 
   .archive-item-date {
-    font-size: 19px;
-    text-align: right;
-    float: right;
+    font-size: 15px;
+    text-align: left;
   }
 
   .article-title {

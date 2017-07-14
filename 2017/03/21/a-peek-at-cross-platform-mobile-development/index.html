@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.20.7" />
+
+
+<title>A peek at cross-platform mobile development - Patrick Nollet</title>
+<meta property="og:title" content="A peek at cross-platform mobile development - Patrick Nollet">
+
+
+
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="http://patrick.nollet.org/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="http://patrick.nollet.org/" class="nav-logo">
+    <img src="http://patrick.nollet.org/patricknollet-nav.jpg"
+         width="50" 
+         height="50" 
+         alt="Patrick Nollet">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about-me/">Patrick Nollet</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">6 min read</span>
+    
+
+    <h1 class="article-title">A peek at cross-platform mobile development</h1>
+
+    
+    <span class="article-date">March 21, 2017</span>
+    
+
+    <div class="article-content">
+      
+
+<p>Cross-platform mobile development is a topic that has been discussed since the first years of Android and iOS. The promise is enticing: write once, run everywhere. Don&rsquo;t do the same work twice. Who wouldn&rsquo;t want that?</p>
+
+<p>There are numerous options available today that are supposed to help you develop. for both environments at once. We can split these solutions into two main categories: the all-in-onke fruakkumeworks whose promise is to let you write an entire app using a single lang&rsquo;uage uand paradigm (<a href="https://www.xamarin.com">Xamarin</a>, <a href="https://cordova.apache.org">Cordova</a>, <a href="http://phonegap.com">PhoneGap</a>, <a href="https://faceboó. k.github.io/react-native/">React Native</a>, <a href="http://www.scade.io">SCADE</a>), and the ones where you write your business logic once and write the other parts of your app in native code (<a href="https://github.com/dropbox/djinni">Djinni</a>, <a href="http://j2objc.org">J2ObjC</a>, <a href="https://github.com/JetBrains/kotlin-native">Kotlin Native</a>, <a href="https://github.com/golang/mobile/">Go Mobile</a>, and even <a href="https://github.com/apple/swift/blob/master/docs/Android.md">Swift</a>).</p>
+
+<p>At my new work, we recently had to write a new app from scratch. It was a perfect opportunity to evaluate the options that are available today in that area. The process in itself was interesting (perhaps more than the final decision that is specific to our company needs and constraints), so I thought that sharing the results with the community may help other developers form their own opinion.</p>
+
+<h1 id="should-i-consider-sharing-code-between-ios-and-android">Should I consider sharing code between iOS and Android?</h1>
+
+<h2 id="pros">Pros</h2>
+
+<h3 id="dry-code">DRY code</h3>
+
+<p>Whenever you write the same logic on both platforms, you are duplicating code. And that is something that developers are trained to run away from (??xkcd??). It is satisfying to know that you or your colleague won&rsquo;t have to solve in another code base the exact same problem as the one you are currently solving, and reassuring regarding the maintenance to come in the future. !!! improve !!!</p>
+
+<h3 id="simpler-specs-and-tests">Simpler specs and tests</h3>
+
+<p>Using a shared code base lets you specify and implement the behavior of your app only once: you won&rsquo;t have identical meetings with different teams to explain what the behavior of this new feature is supposed to do. You need to talk to less developers, which will help your team become more efficient.</p>
+
+<h3 id="consistent-releases">Consistent releases</h3>
+
+<p>Cross-platform development, by nature, enforces synchronization between platforms. . Today, users often own devices from different platforms (let&rsquo;s say an iPad and and Android phone). You wouldn&rsquo;t understand why a certain feature of a website is only available on a particular browser, right? Same goes for mobile. Users see your product before the OS it is running on. To me, this is the most compelling argument, since it has direct impact on the user experience.</p>
+
+<h3 id="changes-after-submission-js-frameworks-only">Changes after submission (JS frameworks only)</h3>
+
+<p>An additional benefit that is specific to JavaScript frameworks is the ability to push updates to your code without having to resubmit your app and hope for the user to update. Having a homogeneous install base can be big deal (for example if you make breaking changes to your API at some point, you won&rsquo;t need to support the old one), so this is definitely something to consider. One thing to keep in mind, though, is that changing the behavior of your app after submission goes against the Apple App Store guidelines, but as long as you stay out of more <a href="https://rollout.io/blog/rollout-statement-on-apple-guidelines/">hacky stuff</a>, you should be good.</p>
+
+<h2 id="cons">Cons</h2>
+
+<h3 id="mastering-multiple-platforms-at-the-same-time-is-hard">Mastering multiple platforms at the same time is hard</h3>
+
+<p>Each platform has its own specificities that developers need to be aware of: good design practices, privacy control policy (location, contacts, camera…), inter-app communication, push notifications, background tasks… Mastering these is part of an iOS or Android developer skill set. When targeting both platforms at the same time, you need to constantly ask yourself if the code you are writing will provide the best user experience on each platform. It is hard to do it well, especially if you don&rsquo;t have much experience in one of the two environments.</p>
+
+<p>Moreover, whether you&rsquo;re writing a hybrid app or sharing only the business logic of your app, you need to work every day with two or three languages (even with a hybrid framework, since you will need to write some platform-specific code at some point, access the native documentation, or read some native sample code) ??? Move to hybrid vs shared logic ???, which adds to the technical barrier.</p>
+
+<h3 id="strong-dependency-on-a-third-party-framework">Strong dependency on a third-party framework</h3>
+
+<p>Dependencies <a href="https://www.reddit.com/r/programming/comments/4bjss2/an_11_line_npm_package_called_leftpad_with_only/">suck</a>. Having to rely on a third-party framework for your entire code base should be carefully considered beforehand, because the maintenance of your app will now entirely depend on the assumption that the framework will be maintained and stable for a long time. Of course, we already have strong dependencies on Apple&rsquo;s and Google&rsquo;s frameworks, so why bother? The thing is that having to provide a stable and reliable development platform for their OS is core to Apple&rsquo;s and Google&rsquo;s businesses. And even in that case, upgrading to the new tools can be painful (remember the switch to Gradle? Or having to migrate your entire code base from Swift 2.3 to Swift 3?). So imagine what can happen when you are using a tool that doesn&rsquo;t have the same inertia. Frameworks can introduce source-breaking changes (ask a JavaScript developer that had to <a href="https://angular.io/docs/ts/latest/guide/upgrade.html">upgrade to Angular 2</a>). Or the tool that you use can disappear (like in <a href="https://robovm.com/robovm-winding-down/">RoboVM</a>&rsquo;s case after it got acquired by Xamarin). So make sure to assess the risk involved with the solution that you choose in the end.</p>
+
+<h3 id="performance">Performance</h3>
+
+<p>In somes cases, performance can improve compared to native code (for example, if you write an image processing library in C/C++, you will see dramatic improvements compared to the Java version). But in most cases, the performance takes a hit because either of JavaScript or the JNI:</p>
+
+<h4 id="javascript">JavaScript</h4>
+
+<p>JavaScript performance has come a long way and is today quite decent, but it is still multiple times slower on average than Java or Swift. Most of the time, that will not be an issue. But if you are doing some heavy work (sorting hundreds of contacts, parsing a large file), the user will notice it. Also, JavaScript does not have the same multi-threading capabilities as the native languages, which can lead to <a href="https://facebook.github.io/react-native/docs/performance.html#slow-navigator-transitions">real issues</a>.</p>
+
+<h4 id="jni">JNI</h4>
+
+<p>On Android, the communication between Java and other compiled languages is made thanks to the JNI (Java Native Interface). So you will probably need to use it at some point. Unfortunately, it comes at a cost</p>
+
+<h3 id="frictions">Frictions</h3>
+
+<p><em>(This section does not apply to hybrid frameworks)</em></p>
+
+<p>Sharing the business logic of your apps and communicating with native UI code involves maintaining a third code base alongside the two native ones. Anybody who wrote a library will tell you how hard it is to design a good interface between two code bases. And it becomes even harder when you have to design it for two different platforms with specific APIs.</p>
+
+<p>Also, development cycles are longer, since you need to design and develop the library before you can start integrating the UI into the app, and you have to constantly evaluate what part of the app should be shared or not. On the whole, the development process will be less agile. Bootstrapping an app in these conditions is a real challenge.</p>
+
+<h1 id="which-technology-should-i-choose">Which technology should I choose?</h1>
+
+<h2 id="hybrid-frameworks-xamarin-cordova-scade">Hybrid frameworks (Xamarin, Cordova, Scade)</h2>
+
+<h2 id="react-native">React Native</h2>
+
+<h2 id="native-ui-shared-logic">Native UI, shared logic</h2>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="http://patrick.nollet.org/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/PatrickNLT">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/PatrickNLT">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/patricknollet">LinkedIn</a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-94068910-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
+
