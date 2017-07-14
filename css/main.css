@@ -255,6 +255,10 @@ a {
   margin-left: 2px;
 }
 
+.full-column {
+  width: 100%;
+}
+
 @media (min-width: 600px) {
   .header {
     padding: 25px 0;
