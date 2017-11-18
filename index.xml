@@ -6,10 +6,20 @@
     <description>Recent content on Patrick Nollet</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jul 2017 08:28:48 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 18 Nov 2017 09:38:43 +0100</lastBuildDate>
     
 	<atom:link href="http://patrick.nollet.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Slides for my AppDays 2017 talk</title>
+      <link>http://patrick.nollet.org/2017/11/18/slides-for-my-appdays-2017-talk/</link>
+      <pubDate>Sat, 18 Nov 2017 09:38:43 +0100</pubDate>
+      
+      <guid>http://patrick.nollet.org/2017/11/18/slides-for-my-appdays-2017-talk/</guid>
+      <description>Slides for Cross-platform: Picking the best option for your next iOS/Android app, the talk I gave at this year&amp;rsquo;s AppDays, are now available. This was a great experience. Thanks everybody for showing up! 👍
+ </description>
+    </item>
     
     <item>
       <title>Options for cross-platform iOS/Android development in 2017</title>

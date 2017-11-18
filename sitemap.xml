@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://patrick.nollet.org/2017/11/18/slides-for-my-appdays-2017-talk/</loc>
+    <lastmod>2017-11-18T09:38:43+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://patrick.nollet.org/2017/07/14/options-for-cross-platform-ios/android-development-in-2017/</loc>
     <lastmod>2017-07-14T08:28:48+01:00</lastmod>
   </url>
@@ -45,13 +50,13 @@
   
   <url>
     <loc>http://patrick.nollet.org/</loc>
-    <lastmod>2017-07-14T08:28:48+01:00</lastmod>
+    <lastmod>2017-11-18T09:38:43+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://patrick.nollet.org/post/</loc>
-    <lastmod>2017-07-14T08:28:48+01:00</lastmod>
+    <lastmod>2017-11-18T09:38:43+01:00</lastmod>
     <priority>0</priority>
   </url>
   
