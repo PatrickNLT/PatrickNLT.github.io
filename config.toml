@@ -1,0 +1,28 @@
+languageCode = "en-us"
+title = "Patrick Nollet"
+baseurl = "http://patrick.nollet.org/"
+theme = "hugo-lithium-theme"
+googleAnalytics = "UA-94068910-1"
+disqusShortname = ""
+
+[permalinks]
+    post = "/:year/:month/:day/:title/"
+    page = "/:title/"
+
+[[menu.main]]
+    name = "Patrick Nollet"
+    url = "/about-me/"
+
+[params]
+    description = ""
+    archiveYear = "2015"
+    caption = "I'm Patrick Nollet, the CTO and Co-Founder of NEOS, a French startup reinventing the shopping experience in retail stores."
+    twitter = "PatrickNLT"
+    github = "PatrickNLT"
+    linkedin = "patricknollet"
+
+    [params.logo]
+    url = "patricknollet-nav.jpg"
+    width = 50
+    height = 50
+    alt = "Patrick Nollet"
